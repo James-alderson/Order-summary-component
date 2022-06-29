@@ -7,6 +7,7 @@
 4. typography
 5. components
    5.1 card
+   5.2 btn
 
 ------------------------------- */
 
@@ -22,33 +23,171 @@
 :root {
 	--Pale-blue: hsl(225, 100%, 94%);
 	--Bright-blue: hsl(245, 75%, 52%);
-	--Very-pale-blue: hsl(225, 100%, 98%);
+	--Very-pale-blue: hsl(228, 100%, 98%);
 	--Desaturated-blue: hsl(224, 23%, 55%);
 	--Dark-blue: hsl(223, 47%, 23%);
+	--bg-card: hsl(0, 0%, 100%);
+	--bg-card--shadow: hsl(223, 47%, 84%);
+	--bg-btn-payment--shadow: hsl(245, 75%, 90%);
+	--bg-btn-payment--hover: hsl(245, 75%, 68%);
+	--color-light: hsl(0, 0%, 100%);
+	--color-link--hover: hsl(245, 75%, 68%);
 }
 
 /* ===============
    global styles
    =============== */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+:focus {
+	outline: none;
+}
+
 body {
 	display: grid;
 	height: 100vh;
 	place-items: center;
 	color: var(--Dark-blue);
 	font-family: "Red Hat Display", sans-serif;
+	font-weight: 500;
 	line-height: 1.5;
 	margin: 0;
-	background: var(--Pale-blue) url(../images/pattern-background-desktop.svg) no-repeat top center;
+	background: var(--Pale-blue) url(../images/pattern-background-mobile.svg)
+		repeat-x top center;
 }
 
 /* ===============
    typography
    =============== */
-p {
-	font-size: 1rem;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: 900;
+	line-height: 1;
+	margin: 1rem 0;
 }
 
+a {
+	color: var(--Bright-blue);
+	font-weight: 700;
+}
+a:hover,
+a:focus {
+	color: var(--color-link--hover);
+	text-decoration: none;
+}
 
 /* ===============
-   card
+   components
    =============== */
+/* ---- card ----*/
+.card {
+	max-width: 400px;
+	border-radius: 21px;
+	margin: 2rem 1.45rem;
+	box-shadow: 0 20px 20px 0 var(--bg-card--shadow);
+	background-color: var(--bg-card);
+}
+
+.card-img {
+	display: block;
+	width: 100%;
+	height: auto;
+	object-fit: cover;
+	border-radius: 20px 20px 0 0;
+}
+
+.card-content {
+	text-align: center;
+	padding: 0.75rem 1.5rem 1.8rem 1.5rem;
+	border-radius: 0 0 20px 20px;
+}
+
+.card-content h3 {
+	font-size: 1.33rem;
+	margin: 1.3rem 0 1.2rem 0;
+}
+.card-content p {
+	max-width: 250px;
+	color: var(--Desaturated-blue);
+	font-size: 14.5px;
+	line-height: 1.65;
+	margin: auto;
+}
+
+.card-price {
+	display: flex;
+	padding: 1rem;
+	align-items: center;
+	margin: 1.5rem 0 1.3rem 0;
+	justify-content: space-between;
+	border-radius: 12px;
+	background-color: var(--Very-pale-blue);
+}
+
+.card-price a {
+	font-size: 12px;
+}
+
+.card-price-container {
+	flex: 1;
+	display: flex;
+	column-gap: 1.2rem;
+	align-items: center;
+}
+
+.card-price-container img {
+	width: 46px;
+	height: 46px;
+}
+
+.cost {
+	text-align: left;
+}
+
+.cost h5 {
+	margin: 0.15rem 0;
+}
+.cost span {
+	color: var(--Desaturated-blue);
+	font-size: 13.5px;
+}
+
+/* ---- btn ---- */
+.btn {
+	font-size: 0.92rem;
+	font-weight: 700;
+	text-align: center;
+	text-decoration: none;
+	margin: 1.2rem 0;
+}
+
+.btn-payment {
+	display: block;
+	color: var(--color-light);
+	padding: 0.85rem;
+	border-radius: 12px;
+	box-shadow: 0 15px 15px var(--bg-btn-payment--shadow);
+	background-color: var(--Bright-blue);
+}
+.btn-payment:hover,
+.btn-payment:focus {
+	color: var(--color-light);
+	background-color: var(--bg-btn-payment--hover);
+}
+
+.btn-cancel {
+	color: var(--Desaturated-blue);
+	font-size: 0.9rem;
+}
+.btn-cancel:hover,
+.btn-cancel:focus {
+	color: var(--Dark-blue);
+}

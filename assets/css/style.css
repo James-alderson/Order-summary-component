@@ -1,0 +1,54 @@
+/*  ------ Table of content ------
+
+1. webfonts
+   1.1 Red Hat Display
+2. custom property
+3. global styles
+4. typography
+5. components
+   5.1 card
+
+------------------------------- */
+
+/* ===============
+   webfonts
+   =============== */
+/* ---- Red Hat Display ---- */
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+
+/* ===============
+   custom property
+   =============== */
+:root {
+	--Pale-blue: hsl(225, 100%, 94%);
+	--Bright-blue: hsl(245, 75%, 52%);
+	--Very-pale-blue: hsl(225, 100%, 98%);
+	--Desaturated-blue: hsl(224, 23%, 55%);
+	--Dark-blue: hsl(223, 47%, 23%);
+}
+
+/* ===============
+   global styles
+   =============== */
+body {
+	display: grid;
+	height: 100vh;
+	place-items: center;
+	color: var(--Dark-blue);
+	font-family: "Red Hat Display", sans-serif;
+	line-height: 1.5;
+	margin: 0;
+	background: var(--Pale-blue) url(../images/pattern-background-desktop.svg) no-repeat top center;
+}
+
+/* ===============
+   typography
+   =============== */
+p {
+	font-size: 1rem;
+}
+
+
+/* ===============
+   card
+   =============== */

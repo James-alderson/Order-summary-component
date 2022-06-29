@@ -26,6 +26,7 @@
 	--Very-pale-blue: hsl(228, 100%, 98%);
 	--Desaturated-blue: hsl(224, 23%, 55%);
 	--Dark-blue: hsl(223, 47%, 23%);
+  /* ---- Custom ---- */
 	--bg-card: hsl(0, 0%, 100%);
 	--bg-card--shadow: hsl(223, 47%, 84%);
 	--bg-btn-payment--shadow: hsl(245, 75%, 90%);
@@ -40,7 +41,8 @@
 *,
 *::before,
 *::after {
-	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
 }
 
 :focus {
@@ -92,7 +94,8 @@ a:focus {
 	max-width: 400px;
 	border-radius: 21px;
 	margin: 2rem 1.45rem;
-	box-shadow: 0 20px 20px 0 var(--bg-card--shadow);
+	-webkit-box-shadow: 0 20px 20px 0 var(--bg-card--shadow);
+	        box-shadow: 0 20px 20px 0 var(--bg-card--shadow);
 	background-color: var(--bg-card);
 }
 
@@ -123,6 +126,7 @@ a:focus {
 }
 
 .card-price {
+	display: -webkit-box;
 	display: flex;
 	padding: 1rem;
 	align-items: center;
@@ -138,8 +142,11 @@ a:focus {
 
 .card-price-container {
 	flex: 1;
+	display: -webkit-box;
 	display: flex;
-	column-gap: 1.2rem;
+	-webkit-column-gap: 1.2rem;
+	   -moz-column-gap: 1.2rem;
+	        column-gap: 1.2rem;
 	align-items: center;
 }
 
@@ -167,7 +174,9 @@ a:focus {
 	text-align: center;
 	text-decoration: none;
 	margin: 1.2rem 0;
-	user-select: none;
+	-webkit-user-select: none;
+	   -moz-user-select: none;
+	        user-select: none;
 }
 
 .btn-payment {
@@ -175,7 +184,8 @@ a:focus {
 	color: var(--color-light);
 	padding: 0.85rem;
 	border-radius: 12px;
-	box-shadow: 0 15px 15px var(--bg-btn-payment--shadow);
+	-webkit-box-shadow: 0 15px 15px var(--bg-btn-payment--shadow);
+	        box-shadow: 0 15px 15px var(--bg-btn-payment--shadow);
 	background-color: var(--Bright-blue);
 }
 .btn-payment:hover,

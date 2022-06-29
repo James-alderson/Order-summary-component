@@ -27,8 +27,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution](#)
-- Live Site URL: [Live Demo](#)
+- Solution URL: [Solution](https://www.frontendmentor.io/solutions/order-summary-component-1BxwUxSAjY)
+- Live Site URL: [Live Demo](https://james-alderson.github.io/Order-summary-component/)
 
 ## My process
 
